@@ -10,8 +10,6 @@ const index = (req, res) => {
 
         res.json(results)
     })
-
-    res.send('Elenco post')
 }
 
 const show = (req, res) => {
