@@ -1,12 +1,11 @@
 const express = require('express')
 const router = express.Router()
+const postController = require('../controllers/postController')
 
-router.get('/', (req, res) => {
-    res.send('Elenco post')
-})
+router.get('/', postController.index)
 
-router.get('/:id', (req, res) => {
-    res.send(`Dettaglio del post ${req.params.id}`)
-})
+
+router.get('/:id', postController.show)
+
 
 module.exports = router
